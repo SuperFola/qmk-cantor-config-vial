@@ -56,18 +56,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // base layout
     [0] = LAYOUT_split_3x6_3(
-        KC_DEL,  KC_Q,    KC_W,         KC_E,         KC_R,            KC_T,               KC_Y,    KC_U,         KC_I,         KC_O,    KC_P,      KC_CAPS,
-        KC_LALT, KC_A,    LSFT_T(KC_S), LGUI_T(KC_D), LCTL_T(KC_F),    KC_G,               KC_H,    LCTL_T(KC_J), LGUI_T(KC_K), KC_L,    KC_SCLN,   KC_LSFT,
-        XXXXXXX, KC_Z,    KC_X,         KC_C,         KC_V,            KC_B,               KC_N,    KC_M,         KC_COMM,      KC_DOT,  KC_SLSH,   XXXXXXX,
-                                        KC_TAB,       LT(3, KC_SPC),   LT(1, KC_ESC),      OSL(2),  KC_BSPC,      KC_ENT
+        KC_DEL,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,          KC_Y,        KC_U,        KC_I,       KC_O,      KC_P,       KC_CAPS,
+        KC_LALT,    KC_A,       S(KC_S),    G(KC_D),    C(KC_F),    LT(1, KC_G),   LT(1, KC_H), C(KC_J),     G(KC_K),    KC_L,      KC_SCLN,    KC_LSFT,
+        XXXXXXX,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,          KC_N,        KC_M,        KC_COMM,    KC_DOT,    KC_SLSH,    XXXXXXX,
+                                            KC_TAB,  LT(3, KC_SPC), KC_ESC,        OSL(2),      KC_BSPC,     KC_ENT
     ),
 
     // symbols
     [1] = LAYOUT_split_3x6_3(
-        QK_BOOT, KC_TRNS,    KC_AT,      KC_LCBR,    KC_RCBR,    KC_PIPE,                               KC_LT,      KC_UNDS,    KC_EQL,     KC_HASH,    KC_TRNS,    KC_TRNS,
-        KC_TRNS, KC_TRNS,    KC_DLR,     KC_LPRN,    KC_RPRN,    KC_GRV,                                KC_MINS,    KC_DQT,     KC_QUOT,    KC_ASTR,    KC_PLUS,    KC_TRNS,
-        KC_TRNS, KC_TRNS,    KC_CIRC,    KC_LBRC,    KC_RBRC,    KC_TILD,                               KC_GT,      KC_AMPR,    KC_PERC,    KC_EXLM,    KC_BSLS,    KC_TRNS,
-                                            KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS
+        QK_BOOT, KC_TRNS,    KC_AT,      KC_LCBR,    KC_RCBR,    KC_PIPE,           KC_LT,      KC_UNDS,    KC_EQL,     KC_HASH,    KC_TRNS,    KC_TRNS,
+        KC_TRNS, KC_TRNS,    KC_DLR,     KC_LPRN,    KC_RPRN,    KC_GRV,            KC_MINS,    KC_DQT,     KC_QUOT,    KC_ASTR,    KC_PLUS,    KC_TRNS,
+        KC_TRNS, KC_TRNS,    KC_CIRC,    KC_LBRC,    KC_RBRC,    KC_TILD,           KC_GT,      KC_AMPR,    KC_PERC,    KC_EXLM,    KC_BSLS,    KC_TRNS,
+                                         KC_TRNS,    KC_TRNS,    KC_TRNS,           KC_TRNS,    KC_TRNS,    KC_TRNS
     ),
 
     // OSL french
