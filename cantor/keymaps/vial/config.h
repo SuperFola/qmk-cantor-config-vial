@@ -8,3 +8,5 @@
 /* default layer count */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
+/* tapping term in ms */
+#define TAPPING_TERM 180
