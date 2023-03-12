@@ -12,6 +12,8 @@ enum custom_keycodes {
     M_UAGRV,  // ù
     M_UACIR,  // û
     M_OACIR,  // ô
+    M_PRTSC,  // print screen MacOS
+    M_CAPSC,  // capture screen MacOS
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
@@ -48,6 +50,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
             if (record->event.pressed)
                 SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_O));
             break;
+        case M_PRTSC:
+            if (record->event.pressed)
+                SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_4))));
+            break;
+        case M_CAPSC:
+            if (record->event.pressed)
+                SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_5))));
+            break;
     }
 
     return true;
@@ -72,8 +82,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // OSL french
     [2] = LAYOUT_split_3x6_3(
-        XXXXXXX,    XXXXXXX,    XXXXXXX,    M_EACUT,    M_EAGRV,    XXXXXXX,        XXXXXXX,    M_UAGRV,    XXXXXXX,    M_OACIR,    XXXXXXX,    XXXXXXX,
-        XXXXXXX,    M_AAGRV,    M_AACIR,    XXXXXXX,    M_EACIR,    XXXXXXX,        XXXXXXX,    M_UACIR,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    M_EACUT,    M_EAGRV,    M_CAPSC,        XXXXXXX,    M_UAGRV,    XXXXXXX,    M_OACIR,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,    M_AAGRV,    M_AACIR,    XXXXXXX,    M_EACIR,    M_PRTSC,        XXXXXXX,    M_UACIR,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
         XXXXXXX,    XXXXXXX,    XXXXXXX,    A(KC_C),    XXXXXXX,    XXXXXXX,        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
                                             KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS,    KC_TRNS,    KC_TRNS
     ),
