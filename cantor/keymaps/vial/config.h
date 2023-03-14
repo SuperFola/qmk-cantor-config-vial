@@ -8,13 +8,5 @@
 // default layer count
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
-// tapping term in ms
-#define TAPPING_TERM 180
-// Prevent normal rollover on alphas from accidentally triggering mods.
-#define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_FORCE_HOLD
-#undef PERMISSIVE_HOLD
-#undef HOLD_ON_OTHER_KEY_PRESS
-
 #define SPLIT_USB_DETECT
 #define SPLIT_USB_TIMEOUT 2000
